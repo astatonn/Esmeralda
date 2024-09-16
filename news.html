@@ -1,0 +1,63 @@
+<!--
+<div id="PensoAvisoNovaVersao" style="display: none; position:fixed;top:0;left:0;z-index:10000;width:100%;height:100vh;">
+        <div style="background-color:rgba(0, 0, 0, 0.5);position: relative;width: 100%;height: 100vh;">
+                <div style="position: absolute;background-color:rgb(255, 255, 255);width:15%;height:auto;border-radius: 10px;top:50%;left:50%;transform: translate(-50%,-50%);padding:1%;text-align: center;box-shadow:5px 5px 5px 5px rgba(0, 0, 0, 0.2);">
+                        <img src="https://logos.penso.com.br/zimbra10dev/news_img.png" width="60%"/>
+                        <p style="font-size:18px;"><strong>Bem-vindo</strong></p>
+                        <p style="font-size:14px;">ao  novo Penso Mail!</p>
+                        <p style="font-size:12px;">O Penso Mail acaba de ser renovado. E não é só a aparência que mudou! Descubra todas as novidades.</p>
+                        <a href="https://penso.movidesk.com/kb/article/416909/novidades-sobre-o-penso-mail-e-o-zimbra?utm_medium=email&utm_source=sharpspring&sslid=MzaAAENLE1MzEwsA&sseid=MzKAAWMTQwMTAA&jobid=e51977fb-22c4-4e51-8193-7a3684052522" target="_blank" id="redirNewsPenso" style="text-decoration:none;color:#fff;">
+                                <p style="padding:2%;border-radius:10px;background:#111eff;font-size: 12px;">Conhecer o novo Penso Mail</p>
+                        </a>
+                        <p id="fechaNewsPenso" style="padding:2%;border-radius:10px;font-size:12px;cursor:pointer;">Não, obrigado</p>
+                </div>
+        </div>
+</div>
+<script>
+        function checkCookie() {
+                var divCookie = getCookie("divShown");
+                if (divCookie === null) {
+                        // O cookie não está definido, então exiba a div
+                        setTimeout(function() {
+                                document.getElementById("PensoAvisoNovaVersao").style.display = "block";
+                                // Defina o cookie para indicar que a div já foi mostrada
+                                setCookie("divShown", "true", 365); // Define o cookie por 365 dias
+                        },2000);
+                }
+        }
+        function setCookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                        var date = new Date();
+                        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                        expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + value + expires + "; path=/";
+        }
+        function getCookie(name) {
+        var nameEQ = name + "=";
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') {
+                        cookie = cookie.substring(1, cookie.length);
+                }
+                if (cookie.indexOf(nameEQ) === 0) {
+                        return cookie.substring(nameEQ.length, cookie.length);
+                }
+        }
+        return null;
+        }
+        window.onload = checkCookie;
+        
+        var redirButtonPenso = document.getElementById("redirNewsPenso");
+        var closeButtonPenso = document.getElementById("fechaNewsPenso");
+
+        redirButtonPenso.addEventListener("click", function() {
+            document.getElementById("PensoAvisoNovaVersao").style.display = "none";
+        });
+        closeButtonPenso.addEventListener("click", function() {
+            document.getElementById("PensoAvisoNovaVersao").style.display = "none";
+        });
+</script>
+-->
